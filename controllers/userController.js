@@ -75,7 +75,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
 
 const updateUserProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
-  console.log(req.files);
+  console.log(req.file);
   const protocol = req.protocol;
   const host = req.get("host");
   if (req.file) {
